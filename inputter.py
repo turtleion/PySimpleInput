@@ -1,9 +1,9 @@
 import sys
 import warnings
 
-class BetterInput:
+class PySimpleInput:
     def __init__(self):
-        print("Inputter has started")
+
         self.nthinputted = False
 
     # SET FLAG
@@ -57,6 +57,6 @@ class BetterInput:
 
 # HOW TO USE
 
-betterinp = BetterInput()
-sttrs = betterinp.input("Please Input your name!",None,2)
-print(sttrs)
+simple = PySimpleInput()
+ss = simple.input("Please Input your name!",None,2)
+print(ss)
