@@ -11,16 +11,7 @@ class BetterInput:
     # 2 / IGN_EMT_INPTD_ENTKEY (IGNORE ENTERKEY WHILE INPUTVAR IS EMPTY) used to ignore the enter key if the input is still empty
     # 3 / RQSTD_INTPD_RETURN (...) used to return data from input by converting the data type you need
 
-    # input ARGUMENTS
-
-    # self << represents the instance of the class
-    # strg << string that used to make a question to the user
-    # returnDatatypes << input data type that you need to convert user input data types (ex. int | this will change from originally a string to an integer) | ignored if flag 3 is not enabled
-    #               to enable it you must pass last argument with 3 or RQSTD_INPTD_RETURN
-    # *args << digunakan untuk mengaktifkan flag yang ada di anda masukan di argumen terakhir sesudah (self), strg, returnDatatypes
-    # Enter flags here                                    VVVVVV
-    #   inp = BettetInput.input("What is your name?",None,(HERE))
-
+  
     def input(self,strg,returnDatatypes=None,*args):
         ectr= 0
         while ectr == 0:
