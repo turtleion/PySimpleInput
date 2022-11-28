@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: PySimpleInput
-Version: 0.0.2.1
+Version: 0.0.2.5
 Summary: Package that help you to fix general python input() problems
 Home-page: https://github.com/turtleion/PySimpleInput
 Author: Turtleion
@@ -16,6 +16,7 @@ Requires-Python: >=3.8
 Description-Content-Type: text/markdown
 License-File: LICENSE
 
+<<<<<<< HEAD
 # PySimpleInput || v0. 0.2
 
 Hi! Let me introduce *PySimpleInput* Library
@@ -51,3 +52,4 @@ This project was made 100% by Me (Turtleion)
 This project was licensed by MIT License
 Visit my GitHub
 https://github.com/turtleion
+

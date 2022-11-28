@@ -1,4 +1,5 @@
 import sys
+import os
 import warnings
 
 class PySimpleInput:
@@ -71,6 +72,31 @@ class PySimpleInput:
                     elif key == 110:
                         #NO
                         print("No")
+
+            if 8 in args and not self.nthinputted:
+                print("Flag 8 U-CMD\n")
+                p = self.input("Name of File: ", None, 2)
+                if p == "" or p == None or p.isspace():
+                    raise Exception("File cannot be writen : INVALID_FILENAME")
+                    break
+                pd = self.input("Path (ex. Users/McFrozie/WorkDir): ", None, 2)
+                if pd == "" or pd == None or pd.isspace():
+                    raise Exception("File cannot be writen : INVALID_PATH_NAME")
+                    break
+                if not os.path.isdir(pd):
+                    raise Exception("File cannot be writen : INVALID_PATH_NOTDIR")
+                    break
+
+                with open(pd + "/" + p, 'w') as f:
+                    f.write(str_input)
+                    f.close()
+                if not os.path.isfile(pd + "/" + p):
+
+                    raise Exception("File cannot be writen : UNKNOWN_ERR")
+                    break
+                print("\nWRITE FILE SUCCESS\nFilename: " + p + "\nPath: " + pd + "\nCODE: WRITE_FILE_SUC")
+                return True
+                break
 
             return str_input
             break
