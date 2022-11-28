@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # PySimpleInput || v0. 0.2
 
 Hi! Let me introduce *PySimpleInput* Library
@@ -33,3 +34,4 @@ This project was made 100% by Me (Turtleion)
 This project was licensed by MIT License
 Visit my GitHub
 https://github.com/turtleion
+
