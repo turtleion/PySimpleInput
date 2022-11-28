@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-# PySimpleInput || v0. 0.2
+# PySimpleInput | v0.0.2.1
+
 
 Hi! Let me introduce *PySimpleInput* Library
 This library help you to fix problems with Python Input Built-in Function
