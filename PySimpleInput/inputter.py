@@ -57,7 +57,12 @@ class PySimpleInput:
 
             if 6 in args and not self.nthinputted:
                 str_input = str_input.lower()
-                
+            
+            if 7 in args:
+                if hasattr(sys, 'getandroidapilevel'):
+                    raise Exception("Flag 7 is doesn't support in android (non-root)!")
+                    break
+
             return str_input
             break
 
