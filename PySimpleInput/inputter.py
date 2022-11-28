@@ -62,6 +62,15 @@ class PySimpleInput:
                 if hasattr(sys, 'getandroidapilevel'):
                     raise Exception("Flag 7 is doesn't support in android (non-root)!")
                     break
+                if sys.platform == "darwin":
+                    from msvcrt import getch
+                    key = ord(getch())
+                    if key == 121:
+                        # Yes
+                        print("Yes")
+                    elif key == 110:
+                        #NO
+                        print("No")
 
             return str_input
             break
