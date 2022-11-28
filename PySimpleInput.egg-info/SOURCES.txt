@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+PySimpleInput/__init__.py
+PySimpleInput/inputter.py
+PySimpleInput.egg-info/PKG-INFO
+PySimpleInput.egg-info/SOURCES.txt
+PySimpleInput.egg-info/dependency_links.txt
+PySimpleInput.egg-info/top_level.txt
