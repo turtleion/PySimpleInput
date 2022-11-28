@@ -1,2 +1,2 @@
 # PySimpleInput
-PROJECT PROGRESS : 20% BUGGY
+Progress: 45%
