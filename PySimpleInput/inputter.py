@@ -18,7 +18,6 @@ class PySimpleInput:
                 if not 2 in args:
                     if str_input == None or str_input.isspace() or str_input == "":
                         self.nthinputted = True
-                        print("blank string detected | flag nthinputted activated (NO_ISSUE)")
             # Used to remove all whitespace in the string
             
             if 1 in args and not self.nthinputted:
