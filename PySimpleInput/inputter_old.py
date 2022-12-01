@@ -2,13 +2,12 @@ import sys
 import os
 
 
-class modern:
-    def filterAlpha(self,x):
-        num = x[:]
-        for char in num:
+class old:
+    def filterByNum(self,x):
+        num = []
+        for char in x:
             try:
-                if char.isnumeric():
-                    del num[num.index(char)]
+                num.append(int(char))
             except:
                 pass
 
@@ -22,67 +21,57 @@ class modern:
         self.nthinputted = False
 
 
-    def input(self,strg,options=[],options_arg={}):
+    def input(self,strg,returnDatatypes=None,*args):
         ectr= 0
         while ectr == 0:
             ectr+=1
             str_input = input(strg)
             # Check if user input nothing or only a space
-            if str_input == None or str_input.isspace() or str_input == "":
+            if  not 1 in args:
+                if not 2 in args:
+                    if str_input == None or str_input.isspace() or str_input == "":
                         self.nthinputted = True
             # Used to remove all whitespace in the string
-            # Non Flags
-
-
-
-            if "remove_whitespace" in options and not self.nthinputted:
+            
+            if 1 in args and not self.nthinputted:
                 tmp_str1 = str_input.split(" ")
                 tmp_str1 = "".join(tmp_str1)
                 self.backupStr = tmp_str1
                 str_input = tmp_str1
-            elif "remove_whitespace" in options and str_input.isspace() and not str_input == "":
-                print("The user input string are empty")
+            elif 1 in args and str_input.isspace() and not str_input == "":
+                print("The user input string are empty | OPERATION CANCELED")
                 str_input = ""
-            elif "remove_whitespace" in options and self.nthinputted and not str_input == "":
-                print("Cannot Remove all whitespace on the string")
+            elif 1 in args and self.nthinputted and not str_input == "":
+                print("Cannot Remove all whitespace on the string | OPERATION CANCELED")
 
             # Used to ignore enter key while the input string are empty
-            if "prevent_enterkeypress" in options and str_input == "":
+            if 2 in args and str_input == "":
                 ectr-=1
-                print("Cannot submit empty string/userinput")
                 continue
 
-            if "convert_datatype" in options:
-                try:
-                    if not options_arg["convert_datatype"] == "" or not options_arg["convert_datatype"].isspace() or not options_arg == None:
-                        if "str" == options_arg["convert_datatype"]:
-                            return str_input
-                        elif "int" == options_arg["convert_datatype"]:
-                            if not str_input.isnumeric():
-                                raise Exception("Cannot convert string to int,the string/user input contains Alphabet Characters not Numeric Characters\n\nSolution:\n\tActivate options \"filter_num\"")
-                            return int(str_input)
-                        elif "float" == options_ar["convert_datatype"]:
-                            if not str_input.isnumeric():
-                                    raise Exception("Cannot convert string to int,the string/user input contains Alphabet Characters not Numeric Characters")
-                            return float(int(str_input))
-                except (KeyError, IndexError):
-                    print("Operation canceled, nothing to do.\noptions \"convert_datatype\" are activated but options_arg[\"convert_datatype\"] is empty and options_arg[\"convrrt_datatype\"] is required for this options")
-                    break
-
-            if "filter_num" in options and not self.nthinputted:
+            if 3 in args and not returnDatatypes == None:
+                if "str":
+                    return str_input
+                elif "int":
+                    if not str_input.isnumeric():
+                        raise Exception("Cannot convert string to int,the string/user input contains Alphabet Characters not Numeric Characters\n\nSolution:\n\tActivate flags number 4")
+                    return int(str_input)
+                elif "float":
+                    if not str_input.isnumeric():                                             raise Exception("Cannot convert string to int,the string/user input contains Alphabet Characters not Numeric Characters")
+                    return float(int(str_input))
+            if 4 in args and not self.nthinputted:
                 if str_input.isalpha():
                     print("Cannot filter all numeric number, No Numeric numbers are detected")
                     break
                 str_input = "".join(filter(str.isdigit, str_input))
             
-            if "to_upper" in options and not self.nthinputted:
+            if 5 in args and not self.nthinputted:
                 str_input = str_input.upper()
 
-            if "to_lower" in options and not self.nthinputted:
+            if 6 in args and not self.nthinputted:
                 str_input = str_input.lower()
-
-            # Mode Section not options
-            if "yesno_prompt" in options:
+            
+            if 7 in args:
                 if hasattr(sys, 'getandroidapilevel'):
                     raise Exception("Flag 7 is doesn't support in android (non-root)!")
                     break
@@ -96,9 +85,9 @@ class modern:
                         #NO
                         print("No")
 
-            # Mode section
-            if "redirect_output" in options and not self.nthinputted:
-                print("Flag 8 : Redirecting output to file\n")
+
+            if 8 in args and not self.nthinputted:
+                print("Flag 8 : Redirecting output to..\n")
                 p = self.input("Name of File: ", None, 2)
                 if p == "" or p == None or p.isspace():
                     raise Exception("File cannot be writen : INVALID_FILENAME")
@@ -121,8 +110,7 @@ class modern:
                 print("\nWRITE FILE SUCCESS\nFilename: " + p + "\nPath: " + pd + "\nCODE: WRITE_FILE_SUC")
                 return True
                 break
-
-            if "filter_alpha" in options and not self.nthinputted:
+            if 9 in args and not self.nthinputted:
                 if str_input.isnumeric():
                     print("Cannot remove numeric char, all char are numerics!")
                     break
