@@ -1,4 +1,5 @@
 import sys
+import os
 import warnings
 
 class PySimpleInput:
@@ -17,7 +18,6 @@ class PySimpleInput:
                 if not 2 in args:
                     if str_input == None or str_input.isspace() or str_input == "":
                         self.nthinputted = True
-                        print("blank string detected | flag nthinputted activated (NO_ISSUE)")
             # Used to remove all whitespace in the string
             
             if 1 in args and not self.nthinputted:
@@ -57,7 +57,46 @@ class PySimpleInput:
 
             if 6 in args and not self.nthinputted:
                 str_input = str_input.lower()
-                
+            
+            if 7 in args:
+                if hasattr(sys, 'getandroidapilevel'):
+                    raise Exception("Flag 7 is doesn't support in android (non-root)!")
+                    break
+                if sys.platform == "darwin":
+                    from msvcrt import getch
+                    key = ord(getch())
+                    if key == 121:
+                        # Yes
+                        print("Yes")
+                    elif key == 110:
+                        #NO
+                        print("No")
+
+            if 8 in args and not self.nthinputted:
+                print("Flag 8 U-CMD\n")
+                p = self.input("Name of File: ", None, 2)
+                if p == "" or p == None or p.isspace():
+                    raise Exception("File cannot be writen : INVALID_FILENAME")
+                    break
+                pd = self.input("Path (ex. Users/McFrozie/WorkDir): ", None, 2)
+                if pd == "" or pd == None or pd.isspace():
+                    raise Exception("File cannot be writen : INVALID_PATH_NAME")
+                    break
+                if not os.path.isdir(pd):
+                    raise Exception("File cannot be writen : INVALID_PATH_NOTDIR")
+                    break
+
+                with open(pd + "/" + p, 'w') as f:
+                    f.write(str_input)
+                    f.close()
+                if not os.path.isfile(pd + "/" + p):
+
+                    raise Exception("File cannot be writen : UNKNOWN_ERR")
+                    break
+                print("\nWRITE FILE SUCCESS\nFilename: " + p + "\nPath: " + pd + "\nCODE: WRITE_FILE_SUC")
+                return True
+                break
+
             return str_input
             break
 
