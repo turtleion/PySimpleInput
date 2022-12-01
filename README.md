@@ -5,7 +5,7 @@ Hi! Let me introduce *PySimpleInput* Library.
 This library help you to fix problems with Python Input Built-in Function.
 
 This library still on development progress.
-    if you found a bugs, report it to me with Github Issues at [PySimpeInput Github Issues](https://github.com/turtleion/PySimpleInput/issues) 
+    if you found a bugs, report it to me with Github Issues at [PySimpleInput Github Issues](https://github.com/turtleion/PySimpleInput/issues) 
     
 # Installation
 You can install PySimpleInput with pip or using .whl or manually with .tar.gz
@@ -24,7 +24,7 @@ You can install PySimpleInput with pip or using .whl or manually with .tar.gz
 
 # Docs - Modern
 First of all we need to know all class in PySimpleInput modules
-MODULES            CLASS
+
 - PySimpleInput -> modern (PySimpleInput.modern)
                     Modern PySimpleInput, got more updates, more bugs have been fixed than the previous version
 
@@ -49,7 +49,7 @@ pyold = PySimpleInput.old()
 pynew = PySimpleInput.new()
 ```
 
-*The difference between is in the changelog*
+*The difference between new and old is in the changelog*
 
 
 ### Method 
