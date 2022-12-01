@@ -115,7 +115,6 @@ like this
 `pysim = pysimpleinput.input("What is your name?", options=["remove_whitespace","prevent_enterkeypress")`
 
 
-*Sorry for bad english, i'am indonesian so it's normal*
 
 --------------
 # Docs - Old
