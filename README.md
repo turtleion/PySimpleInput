@@ -22,7 +22,75 @@ You can install PySimpleInput with pip or using .whl or manually with .tar.gz
 - Then you can install it : `python3 setup.py install`
 
 
-# Docs
+# Docs - Modern
+First of all we need to know all class in PySimpleInput modules
+MODULES            CLASS
+- PySimpleInput -> modern (PySimpleInput.modern)
+                    Modern PySimpleInput, got more updates, more bugs have been fixed than the previous version
+
+- PySimpleInput -> old (PySimpleInput.old)
+                    Old PySimpleInput, simpler and faster but more bugs than later versions
+
+
+## How to Initialize PySimpleInput modules in a new ways
+Old:
+`import PySimpleInput
+ pysim = PySimpleInput.PySimpleInput()
+`
+
+New:
+`import PySimpleInput
+ pyold = PySimpleInput.old() \ The difference between old and new is
+ pynew = PySimpleInput.new() / in the changelog
+
+
+### Method 
+- input() -> label: Give a question to the user
+           > options: set additional settings to the input
+           > extra_options: extra arguments for the input options
+
+#### ARGUMENTS - INPUT()
+LABEL (REQUIRED) : This argument will ask questions to the user, without this argument the user will not be able to answer
+
+OPTIONS (OPTIONAL) : this argument provides additional settings to the input                        ex. filtering user input to return only numbers
+
+EXTRA_OPTIONS (OPTIONAL/SOMETIMES REQUIRED) : Either option requires additional arguments for it to work properly
+
+### OPTIONS - ARG/INPUT()
+
+this section contains all options available in PySimpleInput (Modern)
+
+- remove_whitespace : this option will remove all white space in user input string
+    ex. `pysimOut = pysimpleinput.input("What is your name?", options=["remove_whitespace"]` --> "Joseph Madriguo Terafora" -> "JosephMadrigioTerafora"
+
+- prevent_enterkeypress : this option will block the user from pressing the enter key
+    ex. `pysimOut = pysimpleinput.input("What is your name?", options=["prevent_enterkeypress"]
+
+- convert_datatype : this option will change the user input data type from string to ... (str, int, float)
+    ex. `pysimOut = pysimpleinput.input("How old are you?", options=["filter_num", "convert_datatype"], options_arg={"convert_datatype": "(int, float, str)"} --> "29 (STR)" -> 29 (Int)
+
+- filter_num : this option will filter user input to return only numbers
+    ex. `pysimOut = pysimpleinput.input("How old are you?", options=["filter_num"])` --> "oejnzo299kwjo02" -> "29902" 
+
+- to_upper and to_lower : This argument will change the user input letters to uppercase or vice versa
+    ex. `pysimOut = pysimpleinput.input("What is your name?", options=["to_upper/to_lower"])` --> "gerardo martinuez firatzi" <-> "GERARDO MARTINUEZ FIRATZI"
+
+- yesno_prompt : This argument will make the question yes or no (For now, only windows is supported) (EXPERIMENTAL)
+    NO EXAMPLE
+
+- redirect_output : this argument will write the output to a file (EXPERIMENTAL)
+    NO EXAMPLE
+
+- filter_alpha : This argument will filter user input to return alphabet characters only (NEW)
+    ex. `pysimOut = pysimpleinput.input("Type random string!", options=["filter_alpha"])` --> "hello219282839my282872name283739191is8287399turtleion" -> "hellomynameisturtleion"
+
+### And Also, You can combine options
+like this
+`pysim = pysimpleinput.input("What is your name?", options=["remove_whitespace","prevent_enterkeypress")`
+
+
+--------------
+# Docs - Old
 First of all, you need to initiate the PySimpleInput class to variable
 `import PySimpleInput
  
@@ -32,7 +100,7 @@ First of all, you need to initiate the PySimpleInput class to variable
 PySim.input(..)
 Like Python, you can give a question to the user throught this function
 
-input() Required/Optional Arguments:    arg1 (STRING) This argument will send a question to the user (REQUIRED) 
+input() Required/Optional Arguments:    arg1 (STRING)  This argument will send a question to the user (REQUIRED) 
 - arg2 (STRING) This argument will convert the user input datatypes (OPTIONAL)(NEED FLAG 3 ACTIVATED)
 - arg3 (INTEGER) This argument will activate a flags:
 - List of flags (options/settings) that can be activated:
@@ -74,6 +142,8 @@ You can Contribute by forking this repo and start adding more features, optimizi
 Then you can make a pull request to this repo and wait your pull request merged
 
 You can also contribute by giving a star to this repo 👍
+-----------
+
 
 # Changelog
 --> Changelog at version 0.0.3
@@ -88,7 +158,13 @@ You can also contribute by giving a star to this repo 👍
 - Fixing Typo in README.md
 --------
 
-# Caution
+--> Changelog at version 0.0.3.5
+- Fix README.md
+- Make the options simpler and easier to understand (You still can use old way)
+- Separate Modern & Old ways
+--------
+
+# You need to READ this
 I'm not recommended you to download PySimpleInput below this version (0.0.3.1)
 
 And I will focus to fixing bugs over adding features
