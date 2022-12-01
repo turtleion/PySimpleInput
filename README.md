@@ -1,5 +1,5 @@
 
-# PySimpleInput | v0.0.3 (The Minor Update)
+# PySimpleInput | v0.0.3.1 (Typoman Update)
 
 Hi! Let me introduce *PySimpleInput* Library.
 
