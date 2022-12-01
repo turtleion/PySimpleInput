@@ -59,7 +59,7 @@ input() Required/Optional Arguments:    arg1 (STRING) This argument will send a 
 ### All Flags 3 Code
 - "str" -> convert user input to str
 ++ CAUTION
->>> This method (MAYBE) will nees you to prevent the user entering alphabet characters that can be destroy PySimpleInput system / Use flags 4
+> This method (MAYBE) need you to prevent the user entering alphabet characters that can be destroy PySimpleInput system / Use flags 4
 - "int" ->  convert user input to int
 - "float" ->  convert user input to float
 You can also use multiple flags, like this
@@ -78,17 +78,25 @@ Then you can make a pull request to this repo and wait your pull request merged
 You can also contribute by giving a star to this repo 👍
 
 # Changelog
---> Changelog started at version 0.0.3.5
+--> Changelog at version 0.0.3
 - Add Flags 7, 8
 - Add Docs to README.md
 - Remove wiki.py and PySimpleInput.wiki function (Moved to README.md)
 - Fix README.md | version not changed
 --------
 
+--> Changelog at version 0.0.3.1
+- Fix README.md Indentation blocks
+- Fixing Typo in README.md
+--------
+
+# Caution
+I'm not recommended you to download PySimpleInput below this version (0.0.3.1)
+
+And I will focus to fixing bugs over adding features
+
 # About
 This project was made 100% by Me (Turtleion) 
 This project was licensed by MIT License
 Visit my GitHub
 https://github.com/turtleion
-
-
