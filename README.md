@@ -1,8 +1,10 @@
 
 # PySimpleInput || v0.0.3 (The Minor Update)
 
-Hi! Let me introduce *PySimpleInput* Library
-This library help you to fix problems with Python Input Built-in Function
+Hi! Let me introduce *PySimpleInput* Library.
+
+This library help you to fix problems with Python Input Built-in Function.
+
 This library still on development progress.
     if you found a bugs, report it to me with Github Issues at [PySimpeInput Github Issues](https://github.com/turtleion/PySimpleInput/issues) 
     
@@ -54,10 +56,18 @@ input() Required/Optional Arguments:    arg1 (STRING) This argument will send a 
     -   9 -> the opposite of flags 4 [COMING SOON]
     -   10 -> E-Mail input support [COMING SOON]
     
+### All Flags 3 Code
+- "str" -> convert user input to str
+++ CAUTION
+>>> This method (MAYBE) will nees you to prevent the user entering alphabet characters that can be destroy PySimpleInput system / Use flags 4
+- "int" ->  convert user input to int
+- "float" ->  convert user input to float
 You can also use multiple flags, like this
+
+### Did you know, you can combine a flags
+You can combine a flags like this
 `userinp = PySim.input("What is your name?", None, 1, 2, 5)
-The result is
-`the user inputted: Joe McCallison because flag 1 and 5 activated, it will be like this: JOEMCCALLISON`
+the user inputted: Joe McCallison, because flag 1 and 5 activated, it will be like this: JOEMCCALLISON`
 
 # Contribution
 I Appreciate you for contributing on this modules
