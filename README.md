@@ -34,14 +34,17 @@ MODULES            CLASS
 
 ## How to Initialize PySimpleInput modules in a new ways
 Old:
+
 `import PySimpleInput
  pysim = PySimpleInput.PySimpleInput()
 `
 
 New:
 `import PySimpleInput
- pyold = PySimpleInput.old() \ The difference between old and new is
- pynew = PySimpleInput.new() / in the changelog
+ pyold = PySimpleInput.old()
+ pynew = PySimpleInput.new()`
+
+*The difference between is in the changelog
 
 
 ### Method 
