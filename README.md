@@ -29,33 +29,35 @@ First of all, you need to initiate the PySimpleInput class to variable
 `
 # Know what is .input(...) Method
 PySim.input(..)
-Like Python, you can give a question to the user throught this function                                                                                 input() Required/Optional Arguments:
-    arg1 (STRING) This argument will send a question to the user (REQUIRED) 
-    arg2 (STRING) This argument will convert the user input datatypes (OPTIONAL)(NEED FLAG 3 ACTIVATED)
-    arg3 (INTEGER) This argument will activate a flags:
-    List of flags (options/settings) that can be activated:
-        1 -> Remove all whitespace in the user input    
+Like Python, you can give a question to the user throught this function
+
+input() Required/Optional Arguments:    arg1 (STRING) This argument will send a question to the user (REQUIRED) 
+- arg2 (STRING) This argument will convert the user input datatypes (OPTIONAL)(NEED FLAG 3 ACTIVATED)
+- arg3 (INTEGER) This argument will activate a flags:
+- List of flags (options/settings) that can be activated:
+    -   1 -> Remove all whitespace in the user input    
             ex. `Joe Gregor Van Dones` -> `JoeGregorVanDones`
-        2 -> Prevent user pressing enter while the input field is empty
+    -   2 -> Prevent user pressing enter while the input field is empty
             This options will preventing user to corrupt your input
-        3 -> Allow you to convert the datatype of user input (From String to Intor Float) 
+    -   3 -> Allow you to convert the datatype of user input (From String to Intor Float) 
             This options will convert result datatypes (This options need argument num 2 filled with this `Flag 3 Code`
-            Flag 3 code:                                                                    "str" -> convert user input to str 
+    -   Flag 3 code:                                                                    - "str" -> convert user input to str 
                 ++ CAUTION
-                -- This method (MAYBE) will nees you to prevent the user entering alphabet characters that can be destroy PySimpleInput system / Use flags 4
-                "int" ->  convert user input to int     
+            - -- This method (MAYBE) will nees you to prevent the user entering alphabet characters that can be destroy PySimpleInput system / Use flags 4
+            - "int" ->  convert user input to int     
                 "float" ->  convert user input to float
-        4 -> Remove all alphabet charactets from user input
-        5 -> Convert user input from lower -> upper                                 6 -> Convert user input from upper -> lower
-        7 -> Yes/No input (EXPERIMENTAL)
-        8 -> Redirect user input to a file (EXPERIMENTAL)
-        9 -> the opposite of flags 4 [COMING SOON]
-        10 -> E-Mail input support [COMING SOON]
+    -   4 -> Remove all alphabet charactets from user input
+    -   5 -> Convert user input from lower -> upper
+    -   6 -> Convert user input from upper -> lower
+    -   7 -> Yes/No input (EXPERIMENTAL)
+    -   8 -> Redirect user input to a file (EXPERIMENTAL)
+    -   9 -> the opposite of flags 4 [COMING SOON]
+    -   10 -> E-Mail input support [COMING SOON]
     
-    You can also use multiple flags, like this
-    `userinp = PySim.input("What is your name?", None, 1, 2, 5)
-    The result is
-    `the user inputted: Joe McCallison because flag 1 and 5 activated, it will be like this: JOEMCCALLISON`
+You can also use multiple flags, like this
+`userinp = PySim.input("What is your name?", None, 1, 2, 5)
+The result is
+`the user inputted: Joe McCallison because flag 1 and 5 activated, it will be like this: JOEMCCALLISON`
 
 # Contribution
 I Appreciate you for contributing on this modules
