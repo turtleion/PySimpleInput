@@ -1,4 +1,4 @@
-# PySimpleInput | v0.0.3.1 (Typoman Update)
+# PySimpleInput | v0.0.3.5 (The Tiny Pluto Update)
 
 Hi! Let me introduce *PySimpleInput* Library.
 
@@ -35,27 +35,34 @@ MODULES            CLASS
 ## How to Initialize PySimpleInput modules in a new ways
 Old:
 
-`import PySimpleInput
- pysim = PySimpleInput.PySimpleInput()
-`
+```
+import PySimpleInput
+
+pysim = PySimpleInput.PySimpleInput()
+```
 
 New:
-`import PySimpleInput
- pyold = PySimpleInput.old()
- pynew = PySimpleInput.new()`
 
-*The difference between is in the changelog
+```
+import PySimpleInput
+pyold = PySimpleInput.old() 
+pynew = PySimpleInput.new()
+```
+
+*The difference between is in the changelog*
 
 
 ### Method 
-- input() -> label: Give a question to the user
-           > options: set additional settings to the input
-           > extra_options: extra arguments for the input options
+- input()  
+  - label: Give a question to the user
+  - options: set additional settings to the input
+  - extra_options: extra arguments for the input options
 
 #### ARGUMENTS - INPUT()
 LABEL (REQUIRED) : This argument will ask questions to the user, without this argument the user will not be able to answer
 
-OPTIONS (OPTIONAL) : this argument provides additional settings to the input                        ex. filtering user input to return only numbers
+OPTIONS (OPTIONAL) : this argument provides additional settings to the input 
+                       `ex. filtering user input to return only numbers`
 
 EXTRA_OPTIONS (OPTIONAL/SOMETIMES REQUIRED) : Either option requires additional arguments for it to work properly
 
@@ -64,33 +71,51 @@ EXTRA_OPTIONS (OPTIONAL/SOMETIMES REQUIRED) : Either option requires additional 
 this section contains all options available in PySimpleInput (Modern)
 
 - remove_whitespace : this option will remove all white space in user input string
-    ex. `pysimOut = pysimpleinput.input("What is your name?", options=["remove_whitespace"]` --> "Joseph Madriguo Terafora" -> "JosephMadrigioTerafora"
+
+    > ex. `pysimOut = pysimpleinput.input("What is your name?", options=["remove_whitespace"])`
+
+    > Result. `"Joseph Madriguo Terafora" -> "JosephMadrigioTerafora"`
 
 - prevent_enterkeypress : this option will block the user from pressing the enter key
-    ex. `pysimOut = pysimpleinput.input("What is your name?", options=["prevent_enterkeypress"]
+
+    > ex. `pysimOut = pysimpleinput.input("What is your name?", options=["prevent_enterkeypress"])`
 
 - convert_datatype : this option will change the user input data type from string to ... (str, int, float)
-    ex. `pysimOut = pysimpleinput.input("How old are you?", options=["filter_num", "convert_datatype"], options_arg={"convert_datatype": "(int, float, str)"} --> "29 (STR)" -> 29 (Int)
+
+    > ex. `pysimOut = pysimpleinput.input("How old are you?", options=["filter_num", "convert_datatype"], options_arg={"convert_datatype": "(int, float, str)"})`
+
+    > Result. --> `"29 (STR)" -> 29 (Int)`
 
 - filter_num : this option will filter user input to return only numbers
-    ex. `pysimOut = pysimpleinput.input("How old are you?", options=["filter_num"])` --> "oejnzo299kwjo02" -> "29902" 
+
+    > ex. `pysimOut = pysimpleinput.input("How old are you?", options=["filter_num"])`
+
+    > Result. --> `"oejnzo299kwjo02" -> "29902"`
 
 - to_upper and to_lower : This argument will change the user input letters to uppercase or vice versa
-    ex. `pysimOut = pysimpleinput.input("What is your name?", options=["to_upper/to_lower"])` --> "gerardo martinuez firatzi" <-> "GERARDO MARTINUEZ FIRATZI"
+
+    > ex. `pysimOut = pysimpleinput.input("What is your name?", options=["to_upper/to_lower"])`
+
+    > Result. --> `"gerardo martinuez firatzi" <(OR)> "GERARDO MARTINUEZ FIRATZI"`
 
 - yesno_prompt : This argument will make the question yes or no (For now, only windows is supported) (EXPERIMENTAL)
-    NO EXAMPLE
+    > NO EXAMPLE
 
 - redirect_output : this argument will write the output to a file (EXPERIMENTAL)
-    NO EXAMPLE
+    > NO EXAMPLE
 
 - filter_alpha : This argument will filter user input to return alphabet characters only (NEW)
-    ex. `pysimOut = pysimpleinput.input("Type random string!", options=["filter_alpha"])` --> "hello219282839my282872name283739191is8287399turtleion" -> "hellomynameisturtleion"
+
+    > ex. `pysimOut = pysimpleinput.input("Type random string!", options=["filter_alpha"])`
+
+    > Result. --> `"hello219282839my282872name283739191is8287399turtleion" -> "hellomynameisturtleion"`
 
 ### And Also, You can combine options
 like this
 `pysim = pysimpleinput.input("What is your name?", options=["remove_whitespace","prevent_enterkeypress")`
 
+
+*Sorry for bad english, i'am indonesian so it's normal*
 
 --------------
 # Docs - Old
@@ -177,3 +202,6 @@ This project was made 100% by Me (Turtleion)
 This project was licensed by MIT License
 Visit my GitHub
 https://github.com/turtleion
+
+
+*Sorry for bad English, I"am Indonesian. so it's normal for me*
