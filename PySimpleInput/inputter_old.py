@@ -120,12 +120,12 @@ class old:
             return str_input
             break
     @staticmethod
-    def testUnitProcedure(self):
+    def testUnitProcedure():
         return True
 
 # TEST
 
 def test():
-    return PySimpleInput.testUnitProcedure()
+    return old.testUnitProcedure()
 
 
