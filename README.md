@@ -51,13 +51,7 @@ pyold = PySimpleInput.old()
 pynew = PySimpleInput.new()
 ```
 
-<<<<<<< HEAD
-*The difference between new and old is in the changelog*
-=======
 *The difference between new PySimpleInput and old PySimpleInput is in the changelog*
->>>>>>> 47abd65 (UPDATE  README.md)
-
-
 ### Method 
 - input()  
   - label: Give a question to the user
