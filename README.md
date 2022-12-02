@@ -22,7 +22,9 @@ You can install PySimpleInput with pip or using .whl or manually with .tar.gz
 - Then you can install it : `python3 setup.py install`
 
 
-# Docs - Modern
+# Docs
+*if you want the latest update, choose the devel branch, if you want stable then choose play, if you want to try the newest and earlier features*
+
 First of all we need to know all class in PySimpleInput modules
 
 - PySimpleInput -> modern (PySimpleInput.modern)
@@ -49,7 +51,11 @@ pyold = PySimpleInput.old()
 pynew = PySimpleInput.new()
 ```
 
+<<<<<<< HEAD
 *The difference between new and old is in the changelog*
+=======
+*The difference between new PySimpleInput and old PySimpleInput is in the changelog*
+>>>>>>> 47abd65 (UPDATE  README.md)
 
 
 ### Method 
@@ -58,7 +64,7 @@ pynew = PySimpleInput.new()
   - options: set additional settings to the input
   - extra_options: extra arguments for the input options
 
-#### ARGUMENTS - INPUT()
+#### ARGUMENTS on the input method
 LABEL (REQUIRED) : This argument will ask questions to the user, without this argument the user will not be able to answer
 
 OPTIONS (OPTIONAL) : this argument provides additional settings to the input 
@@ -66,7 +72,7 @@ OPTIONS (OPTIONAL) : this argument provides additional settings to the input
 
 EXTRA_OPTIONS (OPTIONAL/SOMETIMES REQUIRED) : Either option requires additional arguments for it to work properly
 
-### OPTIONS - ARG/INPUT()
+### OPTIONS on the input method
 
 this section contains all options available in PySimpleInput (Modern)
 
@@ -114,53 +120,7 @@ this section contains all options available in PySimpleInput (Modern)
 like this
 `pysim = pysimpleinput.input("What is your name?", options=["remove_whitespace","prevent_enterkeypress")`
 
-
-
 --------------
-# Docs - Old
-First of all, you need to initiate the PySimpleInput class to variable
-`import PySimpleInput
- 
- PySim = PySimpleInput.PySimpleInput()
-`
-# Know what is .input(...) Method
-PySim.input(..)
-Like Python, you can give a question to the user throught this function
-
-input() Required/Optional Arguments:    arg1 (STRING)  This argument will send a question to the user (REQUIRED) 
-- arg2 (STRING) This argument will convert the user input datatypes (OPTIONAL)(NEED FLAG 3 ACTIVATED)
-- arg3 (INTEGER) This argument will activate a flags:
-- List of flags (options/settings) that can be activated:
-    -   1 -> Remove all whitespace in the user input
-  
-            ex. `Joe Gregor Van Dones` -> `JoeGregorVanDones`
-    -   2 -> Prevent user pressing enter while the input field is empty
-
-            This options will preventing user to corrupt your input
-    -   3 -> Allow you to convert the datatype of user input (From String to Int or Float)
-
-            This options will convert result datatypes (This options need argument num 2 filled with this `Flag 3 Code`
-    -   4 -> Remove all alphabet charactets from user input
-    -   5 -> Convert user input from lower -> upper
-    -   6 -> Convert user input from upper -> lower
-    -   7 -> Yes/No input (EXPERIMENTAL)
-    -   8 -> Redirect user input to a file (EXPERIMENTAL)
-    -   9 -> the opposite of flags 4 [COMING SOON]
-    -   10 -> E-Mail input support [COMING SOON]
-    
-### All Flags 3 Code
-- "str" -> convert user input to st
-
-++ CAUTION ++
-> This method need you to prevent the user entering alphabet characters that can be destroy PySimpleInput system / Use flags 4
-- "int" ->  convert user input to int
-- "float" ->  convert user input to float
-You can also use multiple flags, like this
-
-### Did you know, you can combine a flags
-You can combine a flags like this
-`userinp = PySim.input("What is your name?", None, 1, 2, 5)
-the user inputted: Joe McCallison, because flag 1 and 5 activated, it will be like this: JOEMCCALLISON`
 
 # Contribution
 I Appreciate you for contributing on this modules
