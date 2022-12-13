@@ -1,4 +1,4 @@
-# PySimpleInput | v0.0.3.5 (The Tiny Pluto Update)
+# PySimpleInput | v0.0.4
 
 Hi! Let me introduce *PySimpleInput* Library.
 
