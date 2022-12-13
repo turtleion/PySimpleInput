@@ -8,7 +8,7 @@ clean:
 
 .PHONY: upload
 upload:
-	python3 -m twine --upload dist/* pypi
+	python3 -m twine upload dist/* --repository pypi
 .PHONY: build
 build:
 	python3 -m build
