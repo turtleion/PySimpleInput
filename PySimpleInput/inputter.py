@@ -1,8 +1,10 @@
 import sys
 import os
+from validate_email import validate_email
+import phonenumbers
+import check_url
 
-
-class modern:
+class PySimpleInput:
     def filterAlpha(self,x):
         num = x[:]
         for char in num:
@@ -49,7 +51,7 @@ class modern:
             # Used to ignore enter key while the input string are empty
             if "prevent_enterkeypress" in options and str_input == "":
                 ectr-=1
-                print("Cannot submit empty string/userinput")
+                print("You must enter a text/string to continue")
                 continue
 
             if "convert_datatype" in options:
@@ -59,14 +61,14 @@ class modern:
                             return str_input
                         elif "int" == options_arg["convert_datatype"]:
                             if not str_input.isnumeric():
-                                raise Exception("Cannot convert string to int,the string/user input contains Alphabet Characters not Numeric Characters\n\nSolution:\n\tActivate options \"filter_num\"")
+                                raise Exception("Cannot convert string to int,the string/user input contains Alphabet Characters\n\nSolution:\n\toptions \"filter_num\"")
                             return int(str_input)
                         elif "float" == options_ar["convert_datatype"]:
                             if not str_input.isnumeric():
-                                    raise Exception("Cannot convert string to int,the string/user input contains Alphabet Characters not Numeric Characters")
+                                    raise Exception("Cannot convert string to int,the string/user input contains Alphabet Characters")
                             return float(int(str_input))
                 except (KeyError, IndexError):
-                    print("Operation canceled, nothing to do.\noptions \"convert_datatype\" are activated but options_arg[\"convert_datatype\"] is empty and options_arg[\"convrrt_datatype\"] is required for this options")
+                    print("Operation canceled, nothing todo.\noptions \"convert_datatype\" are activated but options_arg[\"convert_datatype\"] is empty and options_arg[\"convert_datatype\"] is required for this options")
                     break
 
             if "filter_num" in options and not self.nthinputted:
@@ -83,18 +85,10 @@ class modern:
 
             # Mode Section not options
             if "yesno_prompt" in options:
-                if hasattr(sys, 'getandroidapilevel'):
-                    raise Exception("Flag 7 is doesn't support in android (non-root)!")
-                    break
-                if sys.platform == "darwin":
-                    from msvcrt import getch
-                    key = ord(getch())
-                    if key == 121:
-                        # Yes
-                        print("Yes")
-                    elif key == 110:
-                        #NO
-                        print("No")
+                if str_input.lower() == "y":
+                    return True
+                else:
+                    return False
 
             # Mode section
             if "redirect_output" in options and not self.nthinputted:
@@ -108,7 +102,7 @@ class modern:
                     raise Exception("File cannot be writen : INVALID_PATH_NAME")
                     break
                 if not os.path.isdir(pd):
-                    raise Exception("File cannot be writen : INVALID_PATH_NOTDIR")
+                    raise Exception("File cannot be written : INVALID_PATH_NOTDIR")
                     break
 
                 with open(pd + "/" + p, 'w') as f:
@@ -129,6 +123,14 @@ class modern:
                 else:
                     tmp = self.filterByNum(str_input)
                     str_input = "".join(tmp)
+            if "validate_email" in options and not self.nthinputted: return validate_email(str_input)
+            if "validate_phonenumber" in options and not self.nthinputted:
+                try:
+                    if str_input.isnumeric(): return phonenumbers.is_valid_number(phonenumbers.parse(str_input, None))
+                except Exception as e:
+                    print(e)
+                    break
+            if "validate_url" in options and not self.nthinputted: return check_url.check(str_input, test=True)
             return str_input
             break
     @staticmethod

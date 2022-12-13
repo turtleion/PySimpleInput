@@ -27,28 +27,13 @@ You can install PySimpleInput with pip or using .whl or manually with .tar.gz
 
 First of all we need to know all class in PySimpleInput modules
 
-- PySimpleInput -> modern (PySimpleInput.modern)
+- PySimpleInput -> PySimpleInput (PySimpleInput.PySimpleInput)
                     Modern PySimpleInput, got more updates, more bugs have been fixed than the previous version
-
-- PySimpleInput -> old (PySimpleInput.old)
-                    Old PySimpleInput, simpler and faster but more bugs than later versions
-
-
 ## How to Initialize PySimpleInput modules in a new ways
-Old:
-
 ```
 import PySimpleInput
 
 pysim = PySimpleInput.PySimpleInput()
-```
-
-New:
-
-```
-import PySimpleInput
-pyold = PySimpleInput.old() 
-pynew = PySimpleInput.new()
 ```
 
 *The difference between new PySimpleInput and old PySimpleInput is in the changelog*
@@ -76,7 +61,7 @@ this section contains all options available in PySimpleInput (Modern)
 
     > Result. `"Joseph Madriguo Terafora" -> "JosephMadrigioTerafora"`
 
-- prevent_enterkeypress : this option will block the user from pressing the enter key
+- prevent_enterkeypress : this option will prevent the user from pressing the enter key
 
     > ex. `pysimOut = pysimpleinput.input("What is your name?", options=["prevent_enterkeypress"])`
 
@@ -92,27 +77,47 @@ this section contains all options available in PySimpleInput (Modern)
 
     > Result. --> `"oejnzo299kwjo02" -> "29902"`
 
-- to_upper and to_lower : This argument will change the user input letters to uppercase or vice versa
+- to_upper and to_lower : This option will change the user input letters to uppercase or vice versa
 
     > ex. `pysimOut = pysimpleinput.input("What is your name?", options=["to_upper/to_lower"])`
 
     > Result. --> `"gerardo martinuez firatzi" <(OR)> "GERARDO MARTINUEZ FIRATZI"`
 
-- yesno_prompt : This argument will make the question yes or no (For now, only windows is supported) (EXPERIMENTAL)
-    > NO EXAMPLE
+- yesno_prompt : This option will make the question yes or no (All OS is now supported) (EXPERIMENTAL)
+    > NO EXAMPLES
 
-- redirect_output : this argument will write the output to a file (EXPERIMENTAL)
-    > NO EXAMPLE
+- redirect_output : this option will write the output to a file (EXPERIMENTAL)
+    > NO EXAMPLES
 
-- filter_alpha : This argument will filter user input to return alphabet characters only (NEW)
+- filter_alpha : This option will filter user input to return alphabet characters only
 
     > ex. `pysimOut = pysimpleinput.input("Type random string!", options=["filter_alpha"])`
 
     > Result. --> `"hello219282839my282872name283739191is8287399turtleion" -> "hellomynameisturtleion"`
 
+- validate_email : This option will validate an email from the user
+
+    > ex. `pysimOut = pysimpleinput.input("Type an email!",options=["validate_email"]
+
+    > Result. --> True | False (If the string is an email it will return True otherwise False
+
+- validate_phonenumber : This option will validate an phone number from the user
+
+    > ex. `pysimOut = pysimpleinput.input("Type your phone numbers!",options=["validate_phonenumber"]
+
+    > Result. --> PhoneNumber | Warning (If the string is a valid number it will return the number back otherwise an warnimg
+
+- validate_url : This option will validate an URL from the user
+
+    > ex. `pysimOut = pysimpleinput.input("Show me Famous Artist in YouTube!", options=["validate_url"])
+
+    > Result. --> True | False (If the string is a valid url, it will eeturn True otherwise False
+
 ### And Also, You can combine options
 like this
 `pysim = pysimpleinput.input("What is your name?", options=["remove_whitespace","prevent_enterkeypress")`
+
+Do not combine "validate" options!
 
 --------------
 
@@ -127,23 +132,32 @@ You can also contribute by giving a star to this repo 👍
 
 
 # Changelog
---> Changelog at version 0.0.3
+--> Changelog | 0.0.3
 - Add Flags 7, 8
 - Add Docs to README.md
 - Remove wiki.py and PySimpleInput.wiki function (Moved to README.md)
 - Fix README.md | version not changed
 --------
 
---> Changelog at version 0.0.3.1
+--> Changelog | 0.0.3.1
 - Fix README.md Indentation blocks
 - Fixing Typo in README.md
 --------
 
---> Changelog at version 0.0.3.5
+--> Changelog | 0.0.3.5
 - Fix README.md
 - Make the options simpler and easier to understand (You still can use old way)
 - Separate Modern & Old ways
 --------
+
+--> Changelog | 0.0.4
+- Changed the contents of README.md to make it easier to understand
+- Added More Features:
+    - "validate_email",
+    - "validate_phonenumber"
+    - "validate_url"
+- Recombining modern & old PySimpleInput
+- Create Makefile to simplify the development process
 
 # You need to READ this
 I'm not recommended you to download PySimpleInput below this version (0.0.3.1)
