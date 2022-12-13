@@ -1,2 +1,2 @@
 from .inputter import *
-from .wiki import *
+from .inputter_old import *

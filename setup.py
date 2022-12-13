@@ -10,7 +10,7 @@ def read(fname):
 
 setup(
     name = "PySimpleInput",
-    version = "0.0.3.1",
+    version = "0.0.4",
     author = "Turtleion",
     author_email = "remastred89@gmail.com",
     description = ("Package that help you to fix general python input() problems"),
