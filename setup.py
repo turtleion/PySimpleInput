@@ -10,12 +10,12 @@ def read(fname):
 
 setup(
     name = "PySimpleInput",
-    version = "0.0.4",
+    version = "0.0.5-r1",
     author = "Turtleion",
     author_email = "remastred89@gmail.com",
-    description = ("Package that help you to fix general python input() problems"),
+    description = ("Advanced Input System"),
     license = "MIT",
-    keywords = "Simple ways to use Input",
+    keywords = "Python3 Input",
     url = "https://github.com/turtleion/PySimpleInput",
     packages=['PySimpleInput'],
     long_description=read('README.md'),

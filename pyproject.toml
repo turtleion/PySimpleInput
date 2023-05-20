@@ -4,11 +4,11 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "PySimpleInput"
-version = "0.0.4"
+version = "0.0.5-r1"
 authors = [
     { name="Turtleion", email="remastred89@gmail.com" },
 ]
-description = "Package that help you to fix general python input() problems"
+description = "Advanced Input System"
 readme = "README.md"
 requires-python = ">=3.8"
 classifiers = [
