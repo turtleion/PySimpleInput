@@ -1,9 +1,9 @@
-# PySimpleInput | v0.0.5 Rev. 1
+# PySimpleInput | v0.0.5 Rev. 2
 
 Hi! Let me introduce *PySimpleInput*
 
-This library still on development progress.
-    if you found a bugs, report it to me at [PySimpleInput Github Issues](https://github.com/turtleion/PySimpleInput/issues) 
+This library is still on development progress.
+    if you've found a bugs, report it to me at [PySimpleInput Github Issues](https://github.com/turtleion/PySimpleInput/issues) 
     
 # Installation
 You can install PySimpleInput with pip or using .whl
@@ -11,13 +11,13 @@ You can install PySimpleInput with pip or using .whl
 `pip3 install --upgrade PySimpleInput`
 ### Using wheel
 - First, you need to get the wheel file from PyPi or Github
-- And, you can install it
+- And then you can install it
 `pip3 install (PySimpleInput Wheel File).whl`
 
 # Docs
-*if you want the latest update, choose the devel branch, if you want stable then choose main branch*
+*if you want the latest update, choose the devel branch, if you want stable update then choose main branch*
 
-## How to Initialize PySimpleInput modules
+## How to Initialize PySimpleInput module
 ```
 import PySimpleInput
 
@@ -37,17 +37,17 @@ OPTIONS (OPTIONAL) : this argument provides additional settings to the input
                        `ex. filtering user input to return only numbers`
 
 
-### OPTIONS on the input method
+### OPTIONS
 
-this section contains all options available in PySimpleInput (Modern)
+this section contain all options that available in PySimpleInput
 
 - rmwhtspc_* : this option will remove all white space in user input string
-    - rmwhtspc_arr : Will return array/list instead of str
+    - rmwhtspc_arr : It'll return array/list instead of str
         > ex. `o = pysimpleinput.input("What's your name?", ["rmwhtspc_arr"])
 
         > Result. `"Joseph Arauro" > "["Joseph", "Arauro"]"`
 
-    - rmwhtspc_str : Will return str
+    - rmwhtspc_str : It'll return str
         > ex. `o = pysimpleinput.input("What is your name?", ["rmwhtspc_str"])`
 
         > Result. `"Joseph Arauro" -> "JosephArauro"`
@@ -89,11 +89,11 @@ this section contains all options available in PySimpleInput (Modern)
 `pysim = pysimpleinput.input("What is your name?", ["rmwhtspc_str","filteralph")`
 
 ### Do not combine "valemail, valphnum" options!
-### and also if you use "rmwhtspc_arr" options.. you will cannot use "valemail, valphnum, filteralph, filternum" options!
+### and also if you are using "rmwhtspc_arr" option.. you might cannot use "valemail, valphnum, filteralph, filternum" options!
 --------------
 
 # Contribution
-I Appreciate you for contributing on this modules
+I'm Appreciate you for contributing on this modules
 ### How To Contribute
 You can Contribute by forking this repo and start adding more features, optimizing code and fixing bugs
 Then you can make a pull request to this repo and wait your pull request merged
@@ -141,6 +141,9 @@ You can also contribute by giving a star to this repo 👍
 - Renamed features
 - Removed some files
 
+--> Changelog | 0.0.5-REV2
+- Update README.md
+
 # About
 This project was made 100% by Me (Turtleion) 
 This project was licensed by MIT License
@@ -148,4 +151,4 @@ Visit my GitHub
 https://github.com/turtleion
 
 
-*Sorry for bad English, I"am Indonesian.*
+*Sorry for bad English, I'am Indonesian btw :).*
