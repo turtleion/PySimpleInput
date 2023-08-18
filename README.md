@@ -47,6 +47,7 @@ pysim = PySimpleInput.PySimpleInput()
 
 ### OPTIONS
 > Note: argument "options" in method input() and process_() are same
+
 this section contain all options that available in PySimpleInput
 
 - rmwhtspc_* :
