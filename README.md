@@ -1,6 +1,7 @@
 # PySimpleInput | v0.0.6
-<img src="https://i.ibb.co/DzJgLRW/image.png" width="250" height="230">
-
+<p align="center">
+    <img src="https://i.ibb.co/DzJgLRW/image.png" width="250" height="230">
+</p>
 Hi! Let me introduce *PySimpleInput*
 
 This library is still on development progress.
@@ -148,7 +149,7 @@ this section contain all options that available in PySimpleInput
 ### And Also, You can combine options like this
 `pysim = pysimpleinput.input("What is your name?", ["rmwhtspc_str","filteralph")`
 
-### Do not combine "valemail, valphnum" options!
+### Do not combine "valemail, val_phonenumber" options!
 ### and also if you are using "rmwhtspc_arr" option.. you might cannot use "valemail, valphnum, filteralph, filternum" options!
 --------------
 
