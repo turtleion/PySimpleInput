@@ -149,7 +149,7 @@ this section contain all options that available in PySimpleInput
 ### And Also, You can combine options like this
 `pysim = pysimpleinput.input("What is your name?", ["rmwhtspc_str","filteralph")`
 
-### Do not combine "valemail, valphnum" options!
+### Do not combine "valemail, val_phonenumber" options!
 ### and also if you are using "rmwhtspc_arr" option.. you might cannot use "valemail, valphnum, filteralph, filternum" options!
 --------------
 
