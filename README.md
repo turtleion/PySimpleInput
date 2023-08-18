@@ -1,6 +1,7 @@
 # PySimpleInput | v0.0.6
-<img src="https://i.ibb.co/DzJgLRW/image.png" width="250" height="230">
-
+<p align="center">
+    <img src="https://i.ibb.co/DzJgLRW/image.png" width="250" height="230">
+</p>
 Hi! Let me introduce *PySimpleInput*
 
 This library is still on development progress.
