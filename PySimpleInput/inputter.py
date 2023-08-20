@@ -11,6 +11,7 @@ class PySimpleInput:
     def __init__(self):
         self.warnings =[]
         self.showWarn = False
+
     def filterAlpha(self,x):
         chars = []
         for char in x:
@@ -21,36 +22,20 @@ class PySimpleInput:
                 pass
 
         return chars
-    def show_error(self, t=False):
+
+    def show_error(self, t: bool = False) -> None:
         if t:
             self.showWarn = False
         else:
             print("["+Fore.CYAN+"!"+sr+"]"+" ERROR WILL BE SHOWN.")
             self.showWarn =True
 
-    def __process(self, inp, f):
+    def __process(self, inp: str, f: str) :
         related_f = {}
         tr_res = ""
         warnings = []
-        for i in f:
-            if "min_" in i:
-                _ = i.split("_")[-1]
 
-                if _.isnumeric():
-                    if not len(inp) >= int(_):
-                        print("[" + Fore.RED + "E" + sr + "] Not enough answer, required: "+str(_)+" Detected/Given: "+str(len(inp)))
-                        return False
-                else:
-                    pass
-            if "max_" in i:
-                _ = i.split("_")[-1]
 
-                if _.isnumeric():
-                    if not len(inp) < int(_):
-                        print("[" + Fore.RED + "E" + sr + "] Too much answer, required: "+str(_)+" Detected/Given: "+str(len(inp)))
-                        return False
-                else:
-                    pass
         if "upcase" in f: inp = inp.upper()
         if "lowcase" in f: inp = inp.lower()
         if "translate" in f:
@@ -115,7 +100,6 @@ class PySimpleInput:
                 warnings.append("[E] " + str(e))
                 pass
 
-
         if self.showWarn:
             enc = 0
             for warn in warnings:
@@ -126,10 +110,11 @@ class PySimpleInput:
         elif not len(tr_res) == 0:
             return tr_res
 
-    def process_(self, text, f):
+    def process_(self, text: str, f: list) -> str:
         proc = self.__process(text, f)
         return proc
-    def input(self, label="Please enter an input.", f=[]):
+
+    def input(self, label: str ="Please enter an input.", f: list = []) -> str:
         print(label)
         while True:
             try:
